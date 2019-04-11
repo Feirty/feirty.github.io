@@ -100,7 +100,9 @@
 <meta property="og:image" content="http://yoursite.com/images/Hexobuild/git-6.png">
 <meta property="og:image" content="http://yoursite.com/images/Hexobuild/ip-1.png">
 <meta property="og:image" content="http://yoursite.com/images/Hexobuild/ip-2.png">
-<meta property="og:updated_time" content="2019-04-11T08:46:06.841Z">
+<meta property="og:image" content="http://yoursite.com/images/Hexobuild/github-1.png">
+<meta property="og:image" content="http://yoursite.com/images/Hexobuild/github-2.png">
+<meta property="og:updated_time" content="2019-04-11T08:56:04.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo静态博客框架搭建">
 <meta name="twitter:description" content="记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。   [TOC] 开始nodeJs与git依赖环境搭建1.访问nodeJs官网，下载对应的版本：https://nodejs.org/en/download/      2.安装完成后，配置环境变量，定位到nodeJs安装根目录    3.验证是否安装成功,成功出现nod">
@@ -403,6 +405,12 @@
 <p><img src="/images/Hexobuild/ip-1.png" alt>  </p>
 <p>2.获取github的ip</p>
 <p><img src="/images/Hexobuild/ip-2.png" alt>  </p>
+<p>3.博客文件source中创建一个名为CNAME文件,添加域名，无需前缀  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mxo.mobi</span><br></pre></td></tr></table></figure>
+<p><img src="/images/Hexobuild/github-1.png" alt></p>
+<p><img src="/images/Hexobuild/github-2.png" alt>  </p>
+<p>4.重新部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
       
     </div>
