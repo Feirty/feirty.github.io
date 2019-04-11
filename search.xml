@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F04%2F10%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[Hexo静态博客框架搭建]]></title>
+    <url>%2F2019%2F04%2F11%2FHexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。 开始nodeJs与git依赖环境搭建1$ hexo new "My New Post" More info: Writing Hexo框架搭建与配置1$ hexo server More info: Server Hexo主题下载与配置1$ hexo generate More info: Generating github.io绑定域名访问1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
