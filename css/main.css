@@ -1510,6 +1510,9 @@ pre .javascript .function {
   font-size: 14px;
   margin-top: 2px;
 }
+.post-wordcount {
+  display: inline-block;
+}
 .post-meta-divider {
   margin: 0 0.5em;
 }
@@ -1819,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff471c;
+  background: #ffff1c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3050,10 +3053,11 @@ pre .javascript .function {
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px solid #eee;
 }
 .post-body h4 {
   font-size: 1.2em;
+  border-bottom: 1px dotted #eee;
 }
 .post-body h5 {
   font-size: 1.07em;
@@ -3118,7 +3122,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/bg.png");
+  background: url("/images/bg412.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
