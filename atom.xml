@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>非也</title>
+  <title>絢爛霓虹燈</title>
   
-  <subtitle>mxo.online</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mxo.mobi.com/"/>
@@ -10,7 +10,7 @@
   <id>http://mxo.mobi.com/</id>
   
   <author>
-    <name>mxo</name>
+    <name>非也</name>
     
   </author>
   
