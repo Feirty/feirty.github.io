@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mxo.mobi.com/"/>
-  <updated>2019-04-11T12:20:21.928Z</updated>
+  <updated>2019-05-10T09:53:10.375Z</updated>
   <id>http://mxo.mobi.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos Linux下搭建Asp.Net环境</title>
+    <link href="http://mxo.mobi.com/2019/05/10/Centos-Linux%E4%B8%8B%E6%90%AD%E5%BB%BAAsp.Net%E7%8E%AF%E5%A2%83/"/>
+    <id>http://mxo.mobi.com/2019/05/10/Centos-Linux下搭建Asp.Net环境/</id>
+    <published>2019-05-10T09:53:10.179Z</published>
+    <updated>2019-05-10T09:53:10.375Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录在linux部署Asp.Net运行环境，使用 Mono + Jexus 部署，Mono是linux运行asp.net必须的编译环境，Jexus是国人开发的反向代理服务器，功能类似Nginx,但是Jexus更加强大，支持Asp.Net运行。   </p><p>Jexus官网地址：<a href="https://www.jexus.org/" target="_blank" rel="noopener">https://www.jexus.org/</a>  </p><h3 id="传统Mono-Jexus安装方法（较繁琐不推荐）"><a href="#传统Mono-Jexus安装方法（较繁琐不推荐）" class="headerlink" title="传统Mono+Jexus安装方法（较繁琐不推荐）"></a>传统Mono+Jexus安装方法（较繁琐不推荐）</h3><p>Jexus通用版不带 .NET运行时，因此，使用者应该首先在客户机安装mono和libgdiplus。  </p><p>在Ubuntu上安装Mono，可参见 <a href="https://www.linuxdot.net/bbsfile-3090" target="_blank" rel="noopener">在Ubuntu操作系统上安装mono的具体方法</a><br>在CentOS上安装Mono，可参见 <a href="http://www.cnblogs.com/shanyou/archive/2012/01/07/2315982.html" target="_blank" rel="noopener">张善友先生写的CentOS Mono安装教程</a>  </p><p>安装jexus通用版的命令是：<br>curl <a href="https://jexus.org/release/install|sudo" target="_blank" rel="noopener">https://jexus.org/release/install|sudo</a> sh  </p><p>注：运行安装命令，需要操作者有root权限。  </p><h3 id="安装Jexus独立版（集成了Mono）"><a href="#安装Jexus独立版（集成了Mono）" class="headerlink" title="安装Jexus独立版（集成了Mono）"></a>安装Jexus独立版（集成了Mono）</h3><p>1.安装命令  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl https://jexus.org/release/x64/install.sh|sudo sh</span><br></pre></td></tr></table></figure><p>2.安装成功后，自动生成安装目录：/usr/jexus/</p><p>3.运行Jexus命令  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/jexus/</span><br><span class="line">$ ./jws start</span><br></pre></td></tr></table></figure><p>4.网页访问（默认配置文件/usr/jexus/siteconf/default,默认端口80，默认访问目录/var/www/default）  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http://localhost:80/info</span><br></pre></td></tr></table></figure><p><img src="/images/Jexus/jexus-1.png" alt> </p><p>看到以上页面说明安装成功</p><p>4.新建默认的项目路径</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /var/www/default</span><br></pre></td></tr></table></figure><p>将项目文件复制到 /var/www/default目录下</p><p>5.自定义配置  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /usr/jexus/siteconf/default</span><br></pre></td></tr></table></figure><p><img src="/images/Jexus/jexus-2.png" alt> </p><p>核心配置  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">port=80</span><br><span class="line">root=/ /var/www/default #默认访问目录，可自定义</span><br></pre></td></tr></table></figure><p>6.常用命令  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./jws start</span><br><span class="line">$ ./jws restart</span><br><span class="line">$ ./jws stop</span><br></pre></td></tr></table></figure><h3 id="安装成功后遇到的问题解答"><a href="#安装成功后遇到的问题解答" class="headerlink" title="安装成功后遇到的问题解答"></a>安装成功后遇到的问题解答</h3><p>1.System.IO.IOException   </p><p>详细错误代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">System.IO.IOException</span><br><span class="line">The configured user limit (128) on the number of inotify instances has been reached.</span><br><span class="line">Description: HTTP 500.Error processing request.</span><br><span class="line"></span><br><span class="line">Details: Non-web exception. Exception origin (name of application or object): System.</span><br><span class="line"></span><br><span class="line">Exception stack trace:</span><br><span class="line">  at System.IO.CoreFX.FileSystemWatcher.StartRaisingEvents () [0x0007b] in &lt;e35dfeba7ed248b1a1d7afe3381392f9&gt;:0 </span><br><span class="line">  at System.IO.CoreFX.FileSystemWatcher.StartRaisingEventsIfNotDisposed () [0x00019] in &lt;e35dfeba7ed248b1a1d7afe3381392f9&gt;:0 </span><br><span class="line">  at System.IO.CoreFX.FileSystemWatcher.set_EnableRaisingEvents (System.Boolean value) [0x0001d] in &lt;e35dfeba7ed248b1a1d7afe3381392f9&gt;:0 </span><br><span class="line">  at (wrapper remoting-invoke-with-check) System.IO.CoreFX.FileSystemWatcher.set_EnableRaisingEvents(bool)</span><br><span class="line">  at System.IO.CoreFXFileSystemWatcherProxy+&lt;&gt;c.&lt;StartDispatching&gt;b__9_0 (System.IO.CoreFX.FileSystemWatcher internal_fsw, System.IO.FileSystemWatcher fsw) [0x00048] in &lt;e35dfeba7ed248b1a1d7afe3381392f9&gt;:0 </span><br><span class="line">  at System.IO.CoreFXFileSystemWatcherProxy.Operation (System.Action`4[T1,T2,T3,T4] map_op, System.Action`2[T1,T2] object_op, System.Object handle, System.Action`2[T1,T2] cancel_op) [0x00184] in &lt;e35dfeba7ed248b1a1d7afe3381392f9&gt;:0</span><br></pre></td></tr></table></figure><p>解决方案:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/sysctl.conf</span><br><span class="line">$ 在文件末尾新添加一句：fs.inotify.max_user_instances=1024</span><br><span class="line">$ ./sbin/sysctl -p  #使编辑内容生效</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;记录在linux部署Asp.Net运行环境，使用 Mono + Jexus 部署，Mono是linux运行asp.net必须的编译环境，Jexus是国人开发的反向代理服务器，功能类似Nginx,但是Jexus更加强大，支持Asp.Net运行。   &lt;/p&gt;
+&lt;p&gt;Jexus
+      
+    
+    </summary>
+    
+      <category term="C#" scheme="http://mxo.mobi.com/categories/C/"/>
+    
+    
+      <category term="C#" scheme="http://mxo.mobi.com/tags/C/"/>
+    
+      <category term="ASP.NET" scheme="http://mxo.mobi.com/tags/ASP-NET/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo静态博客框架搭建</title>
