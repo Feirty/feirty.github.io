@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #98da1d;
+  background: #24ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3122,7 +3122,6 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/2020_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
