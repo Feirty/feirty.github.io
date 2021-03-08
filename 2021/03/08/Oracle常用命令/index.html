@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="数据库,Oracle,">
 
 
 
@@ -88,13 +88,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="絢爛霓虹燈">
-<meta property="og:url" content="http://mxo.mobi.com/index.html">
+<meta name="description" content="Oracle使用过程中涉及到的命令，在此记录   权限相关命令 创建用户 1create user test identified by test;    用户授权 1grant create session, connect, resource to test;    授权存储过程给目标用户 1grant all on s_user.exchange to t_user;    授权表给目标用户">
+<meta name="keywords" content="数据库,Oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle使用过程中涉及到的命令">
+<meta property="og:url" content="http://mxo.mobi.com/2021/03/08/Oracle常用命令/index.html">
 <meta property="og:site_name" content="絢爛霓虹燈">
+<meta property="og:description" content="Oracle使用过程中涉及到的命令，在此记录   权限相关命令 创建用户 1create user test identified by test;    用户授权 1grant create session, connect, resource to test;    授权存储过程给目标用户 1grant all on s_user.exchange to t_user;    授权表给目标用户">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-07-20T07:27:59.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="絢爛霓虹燈">
+<meta name="twitter:title" content="Oracle使用过程中涉及到的命令">
+<meta name="twitter:description" content="Oracle使用过程中涉及到的命令，在此记录   权限相关命令 创建用户 1create user test identified by test;    用户授权 1grant create session, connect, resource to test;    授权存储过程给目标用户 1grant all on s_user.exchange to t_user;    授权表给目标用户">
 
 
 
@@ -124,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://mxo.mobi.com/">
+  <link rel="canonical" href="http://mxo.mobi.com/2021/03/08/Oracle常用命令/">
 
 
 
 
 
-  <title>絢爛霓虹燈</title>
+  <title>Oracle使用过程中涉及到的命令 | 絢爛霓虹燈</title>
   
 
 
@@ -149,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,156 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mxo.mobi.com/2021/03/08/python编写爬虫，pyqt5界面展示/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="非也">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="絢爛霓虹燈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/03/08/python编写爬虫，pyqt5界面展示/" itemprop="url">python+pyqt5编写爬虫界面（界面与处理逻辑分离）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-08T20:27:14+08:00">
-                2021-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/爬虫初级/" itemprop="url" rel="index">
-                    <span itemprop="name">爬虫初级</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这段时间比较空闲，对爬虫比较感兴趣，所以用pyqt5作为爬虫数据的展示界面，以下为我学习过后的代码整理
-界面设计工具 Qt Designer该工具下载，请自行百度，使用方法：拖拽控件设计界面，修改控件名称等，不再赘述
-
-安装python 运行依赖12pip install pyqt5   #qt界面
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/03/08/python编写爬虫，pyqt5界面展示/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -422,9 +279,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/03/08/Oracle常用命令/" itemprop="url">Oracle使用过程中涉及到的命令</a></h2>
+          <h2 class="post-title" itemprop="name headline">Oracle使用过程中涉及到的命令</h2>
         
 
         <div class="post-meta">
@@ -492,31 +347,45 @@
       
 
       
-        
-          
-          Oracle使用过程中涉及到的命令，在此记录  
-权限相关命令
-创建用户
-1create user test identified by test;
+        <p>Oracle使用过程中涉及到的命令，在此记录  </p>
+<h3 id="权限相关命令"><a href="#权限相关命令" class="headerlink" title="权限相关命令"></a>权限相关命令</h3><ol>
+<li><p>创建用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> <span class="keyword">test</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p>用户授权</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">create</span> <span class="keyword">session</span>, <span class="keyword">connect</span>, <span class="keyword">resource</span> <span class="keyword">to</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>授权存储过程给目标用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">on</span> s_user.exchange <span class="keyword">to</span> t_user;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p>授权表给目标用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">select</span>,<span class="keyword">update</span>,<span class="keyword">insert</span> <span class="keyword">on</span> DM_ZLYYPT.ADM_ROL_USR_REL  <span class="keyword">to</span> DM_ZLYYPT <span class="keyword">with</span> <span class="keyword">grant</span> <span class="keyword">option</span>;</span><br></pre></td></tr></table></figure>
+<p>提示</p>
+<p>with grant option ：意思是: 用于对象授权时,被授予的用户也可把此对象权限授予其他用户或角色</p>
+</li>
+</ol>
+<h3 id="新建自增表"><a href="#新建自增表" class="headerlink" title="新建自增表"></a>新建自增表</h3><ol>
+<li><p>新建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--创建表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> DM_ZLYYPT.TEST_TABKE(</span><br><span class="line"><span class="keyword">ID</span> <span class="built_in">number</span>(<span class="number">19</span>,<span class="number">0</span>) primary <span class="keyword">key</span>,</span><br><span class="line"><span class="keyword">NAME</span>  VARCHAR2(<span class="number">255</span> <span class="built_in">CHAR</span>),</span><br><span class="line">REMARK  VARCHAR2(<span class="number">255</span> <span class="built_in">CHAR</span>) ,</span><br><span class="line">CREATE_TIME <span class="built_in">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p>新建序列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SEQUENCE</span> DM_ZLYYPT.TEST_TABLE_sequence</span><br><span class="line"><span class="keyword">INCREMENT</span> <span class="keyword">BY</span> <span class="number">1</span>   <span class="comment">-- 每次加几个</span></span><br><span class="line"><span class="keyword">START</span> <span class="keyword">WITH</span> <span class="number">1</span>     <span class="comment">-- 从1开始计数</span></span><br><span class="line"><span class="keyword">NOMAXVALUE</span>        <span class="comment">-- 不设置最大值</span></span><br><span class="line"><span class="keyword">NOCYCLE</span>               <span class="comment">-- 一直累加，不循环</span></span><br><span class="line">NOCACHE               <span class="comment">-- 不建缓冲区</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>新建触发器</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">trigger</span> DM_ZLYYPT.TEST_TABLE_trig <span class="keyword">before</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">on</span> DM_ZLYYPT.TEST_TABKE <span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span> <span class="keyword">when</span> (new.ID <span class="keyword">is</span> <span class="literal">null</span>)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">select</span> DM_ZLYYPT.TEST_TABLE_sequence.nextval <span class="keyword">into</span>:new.ID <span class="keyword">from</span> dual;</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
-
-
-用户授权
-1grant create session, connect, resource to test;
-
-
-
-授权存储过程给目标用户
-1g
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/03/08/Oracle常用命令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
     
@@ -531,306 +400,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mxo.mobi.com/2021/03/08/Hexo静态博客框架搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="非也">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="絢爛霓虹燈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/03/08/Hexo静态博客框架搭建/" itemprop="url">Hexo静态博客框架搭建</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-08T20:27:14+08:00">
-                2021-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
           
-
+            <a href="/tags/Oracle/" rel="tag"># Oracle</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。记录本人Hexo博客搭建过程，作为开启Hexo博客的第一篇博文。  
-nodeJs与git依赖环境搭建1.访问nodeJs官网，下载对应的版本：https://nodejs.org/en/download/  
-  
-2.安装完成后，配
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/03/08/Hexo静态博客框架搭建/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/08/Hexo静态博客框架搭建/" rel="next" title="Hexo静态博客框架搭建">
+                <i class="fa fa-chevron-left"></i> Hexo静态博客框架搭建
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://mxo.mobi.com/2021/03/08/Centos-Linux下搭建Asp.Net环境/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="非也">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="絢爛霓虹燈">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/03/08/Centos-Linux下搭建Asp.Net环境/" itemprop="url">Centos Linux下搭建Asp.Net环境</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-08T20:27:14+08:00">
-                2021-03-08
-              </time>
+              <a href="/2021/03/08/python编写爬虫，pyqt5界面展示/" rel="prev" title="python+pyqt5编写爬虫界面（界面与处理逻辑分离）">
+                python+pyqt5编写爬虫界面（界面与处理逻辑分离） <i class="fa fa-chevron-right"></i>
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C#</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          记录在linux部署Asp.Net运行环境，使用 Mono + Jexus 部署，Mono是linux运行asp.net必须的编译环境，Jexus是国人开发的反向代理服务器，功能类似Nginx,但是Jexus更加强大，支持Asp.Net运行。   
-Jexus官网地址：https://www.jex
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/03/08/Centos-Linux下搭建Asp.Net环境/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -840,10 +445,11 @@ Jexus官网地址：https://www.jex
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -851,6 +457,15 @@ Jexus官网地址：https://www.jex
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzY5Mi8yMDIzMg=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -871,8 +486,17 @@ Jexus官网地址：https://www.jex
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -957,6 +581,22 @@ Jexus官网地址：https://www.jex
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#权限相关命令"><span class="nav-number">1.</span> <span class="nav-text">权限相关命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建自增表"><span class="nav-number">2.</span> <span class="nav-text">新建自增表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1088,6 +728,10 @@ Jexus官网地址：https://www.jex
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1116,6 +760,17 @@ Jexus官网地址：https://www.jex
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
